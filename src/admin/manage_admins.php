@@ -19,7 +19,7 @@
         $_POST = array();
     }
 
-    $list   = $adminModel->GetList();
+    $list   = $adminModel->GetAdmins();
     $admins = array();
     foreach ($list as $l)
     {

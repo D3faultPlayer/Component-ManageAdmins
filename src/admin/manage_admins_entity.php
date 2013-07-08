@@ -21,7 +21,7 @@
         $pwd       = Post('pwd');
         $pwdAgain  = Post('pwd_again');
 
-        $existing = $adminModel->GetByLogin($login);
+        $existing = $adminModel->GetAdminByLogin($login);
          
         if (empty($login))
         {

@@ -32,7 +32,7 @@
 
                 $arrCreates[$this->table] = true;
 
-                if ($this->Count() == 0)
+                if ($this->GetAdminsCount() == 0)
                 {
                     global $g_config;
 
@@ -50,22 +50,22 @@
             }
         }
 
-        public function GetList()
+        public function GetAdmins()
         {
             return $this->db->selectCol("SELECT admin_id FROM ?#", $this->table);
         }
 
-        public function Count()
+        public function GetAdminsCount()
         {
             return $this->db->selectCell("SELECT COUNT(*) FROM ?#", $this->table);
         }
 
-        public function GetByLogin($login)
+        public function GetAdminByLogin($login)
         {
             $id = $this->db->selectCell("SELECT admin_id FROM ?# WHERE login = ?", $this->table, $login);
             if ($id)
             {
-                return new AdminModel($id);
+                return new self($id);
             }
             return NULL;
         }
