@@ -52,7 +52,7 @@
 
         public function GetAdmins()
         {
-            return $this->db->selectCol("SELECT admin_id FROM ?#", $this->table);
+            return $this->db->selectCol("SELECT `admin_id` FROM ?#", $this->table);
         }
 
         public function GetAdminsCount()
@@ -62,7 +62,7 @@
 
         public function GetAdminByLogin($login)
         {
-            $id = $this->db->selectCell("SELECT admin_id FROM ?# WHERE login = ?", $this->table, $login);
+            $id = $this->db->selectCell("SELECT `admin_id` FROM ?# WHERE `login` = ?", $this->table, $login);
             if ($id)
             {
                 return new self($id);
