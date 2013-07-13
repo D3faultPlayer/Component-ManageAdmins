@@ -1,4 +1,3 @@
-
     .manage-admins-table
     {
         td, th
@@ -31,7 +30,7 @@
         }
     }
 
-    .manage-admins-item
+    .manage-admins-entity
     {
         p,
         input,
