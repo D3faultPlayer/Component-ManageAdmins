@@ -1,4 +1,3 @@
-
     <head>
         <link rel="stylesheet" type="text/css" href="<?= Root('i/css/admin/manage_admins.css')?>" />
     </head>
@@ -9,7 +8,7 @@
     <?php endif;?>
     
     <?= $msg?>
-    <form action="<?= GetCurUrl()?>" method="post" class="manage-admins-item">
+    <form action="<?= GetCurUrl()?>" method="post" class="manage-admins-entity">
                            
         <input type="hidden" name="is_apply" value="1">
         <label>
