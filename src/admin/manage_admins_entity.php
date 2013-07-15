@@ -21,13 +21,13 @@
         $pwd       = Post('pwd');
         $pwdAgain  = Post('pwd_again');
 
-        $existing = $adminModel->GetAdminByLogin($login);
+        $existing = $adminModel->GetUserIdByLogin($login);
          
         if (empty($login))
         {
             $errs[] = "Пустой логин";
         }
-        else if ($existing && $existing->admin_id != $admin_id)
+        else if ($existing && $existing != $admin_id)
         {
             $errs[] = "Пользователь с таким логином уже существует";
         }
