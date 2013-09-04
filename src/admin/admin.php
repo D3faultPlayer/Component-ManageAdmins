@@ -45,21 +45,21 @@
 
         if (empty($errs))
         {
-            $admin->login       = $login;
+            $admin->login = $login;
             if (!empty($pwd))
             {
-                $admin->pwd_hash    = $admin->MakeHash($pwd);
+                $admin->pwd_hash = $admin->MakeHash($pwd);
             }
-            $admin->name        = $name;
-            $admin->desc        = $desc;
-            $admin->email       = $email;
-            $admin->phone       = $phone;
-            $admin->reg_time    = time();
-            $id                 = $admin->Flush();
+            $admin->name     = $name;
+            $admin->desc     = $desc;
+            $admin->email    = $email;
+            $admin->phone    = $phone;
+            $admin->reg_time = time();
+            $id              = $admin->Flush();
 
             if ($id)
             {
-                $msg = "<div class='alert alert-success'>Операция успешно выполнена</div>";
+                $msg = MsgOk("Операция успешно выполнена");
                 $_POST = array();
             }
             else
@@ -70,7 +70,7 @@
 
         if (!empty($errs))
         {
-            $msg = "<div class='alert alert-danger'>" . implode('<br>', $errs) . "</div>";
+            $msg = MsgErr(implode('<br>', $errs));
         }
     }
 ?>
