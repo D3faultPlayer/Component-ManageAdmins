@@ -18,7 +18,7 @@
         $_POST = array();
     }
 
-    $admins     = array();
+    $admins = array();
     foreach ($adminModel->GetList() as $aid)
     {
         $admins[$aid] = new AdminModel($aid);
