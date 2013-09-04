@@ -13,8 +13,8 @@
         }
         $isDel = $admin->Delete();
         $msg   = $isDel ? 
-                     "<div class='alert alert-success'>Администратор успешно удален</div>" : 
-                     "<div class='alert alert-danger'>Ошибка удаления администратора</div>";
+                     MsgOk("Администратор успешно удален") : 
+                     MsgErr("Ошибка удаления администратора");
         $_POST = array();
     }
 
