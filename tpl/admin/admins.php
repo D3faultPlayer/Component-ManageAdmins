@@ -1,4 +1,3 @@
-
     <h1>Управление администраторами</h1>
     <br>
     <?= $msg?>
@@ -22,7 +21,7 @@
                         <td><?= $a->email?></td>
                         <td><?= $a->phone?></td>
                         <td><?= $a->desc?></td>
-                        <td>
+                        <td width="1">
                             <div class="btn-group">
                                 <a href="<?= SiteRoot("admin/admin&id=" . $aid)?>" class="btn btn-sm btn-info" title="Изменить данные"><span class="glyphicon glyphicon-wrench"></span></a>
                                 <button href="#" class="btn btn-sm btn-danger" name="remove_id" value="<?= $a->admin_id?>" onclick="return confirm('Удалить данного администратора?')" title="Удалить администратора"><span class="glyphicon glyphicon-trash"></span></a>
