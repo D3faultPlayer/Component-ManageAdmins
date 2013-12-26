@@ -18,13 +18,13 @@
             $this->db->query("CREATE TABLE IF NOT EXISTS ?#
                              (
                                 `admin_id` INT  NOT NULL AUTO_INCREMENT,
-                                `login` VARCHAR(128)  CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                                `pwd_hash` VARCHAR(32)  CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                                `name` VARCHAR(128)  CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                                `desc` VARCHAR(512)  CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                                `email` VARCHAR(128)  CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                                `phone` VARCHAR(128)  CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                                `reg_time` INT  NOT NULL,
+                                `login` VARCHAR(128)  CHARACTER SET utf8 COLLATE utf8_general_ci,
+                                `pwd_hash` VARCHAR(32)  CHARACTER SET utf8 COLLATE utf8_general_ci,
+                                `name` VARCHAR(128)  CHARACTER SET utf8 COLLATE utf8_general_ci,
+                                `desc` VARCHAR(512)  CHARACTER SET utf8 COLLATE utf8_general_ci,
+                                `email` VARCHAR(128)  CHARACTER SET utf8 COLLATE utf8_general_ci,
+                                `phone` VARCHAR(128)  CHARACTER SET utf8 COLLATE utf8_general_ci,
+                                `reg_time` INT,
                                 UNIQUE (`login`),
                                 PRIMARY KEY (`admin_id`)
                              ) ENGINE = MyISAM",
