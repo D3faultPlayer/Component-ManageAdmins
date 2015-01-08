@@ -110,7 +110,7 @@
         }
 
         // Проверяет авторизацию, и если человек не авторизован то проверят на допустимой ли он странице
-        public function ChkLogin()
+        public function CheckLogin()
         {
             global $g_config;
             $query = strtolower(GetQuery());
